@@ -1,9 +1,6 @@
 
 The **gdal transparent hillshades** makefile let you runs 4 tests for transparent hillshades. Made as complement to ["How to create transparent hillshade?"](http://gis.stackexchange.com/questions/144535/how-to-get-transparent-hillshade/144700#144700).
 
-![Opaque hillshade](http://i.stack.imgur.com/1uobu.png "Opaque hillshade")
-![Transparent hillshade](http://i.stack.imgur.com/bdVNL.png "Transparent hillshade")
-
 ### Run
 
 Running the 4 tests :
@@ -31,3 +28,9 @@ You can download further GIS rasters via on-demand area selection on http://gdex
  * GTOPO30 (1px=1km) for area 1000km wide or over ; 
  * *NASA SRTM 3 arsec* (1px=90m) for area about 100km wide ; 
  * *NASA SRTM 1 arsec* (1px=90m) for area 25km wide.
+
+### License
+* MIT License, CC-by-sa-4.0 (as you need).
+
+![Opaque hillshade](http://i.stack.imgur.com/1uobu.png "Opaque hillshade")
+![Transparent hillshade](http://i.stack.imgur.com/bdVNL.png "Transparent hillshade")
