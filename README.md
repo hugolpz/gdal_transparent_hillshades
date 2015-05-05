@@ -23,4 +23,7 @@ gdalwarp -of GTiff -ts 1280 0 input.tif output.tif
  * gdal_calc
 
 ### Resources
-You can download further GIS rasters via on-demand area selection on http://gdex.cr.usgs.gov/gdex/. We recommand you to download : GTOPO30 (1px=1km) for area 1000km wide or over ; *NASA SRTM 3 arsec* (1px=90m) for area about 100km wide ; *NASA SRTM 1 arsec* (1px=90m) for area 25km wide.
+You can download further GIS rasters via on-demand area selection on http://gdex.cr.usgs.gov/gdex/. We recommand you to use and download :
+ * GTOPO30 (1px=1km) for area 1000km wide or over ; 
+ * *NASA SRTM 3 arsec* (1px=90m) for area about 100km wide ; 
+ * *NASA SRTM 1 arsec* (1px=90m) for area 25km wide.
