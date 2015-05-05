@@ -1,5 +1,8 @@
 
-The **gdal transparent hillshades** makefile let you runs 4 tests for transparent hillshades.
+The **gdal transparent hillshades** makefile let you runs 4 tests for transparent hillshades. Made as complement to ["How to create transparent hillshade?"](http://gis.stackexchange.com/questions/144535/how-to-get-transparent-hillshade/144700#144700).
+
+![Opaque hillshade](http://i.stack.imgur.com/1uobu.png "Opaque hillshade")
+![Transparent hillshade](http://i.stack.imgur.com/bdVNL.png "Transparent hillshade")
 
 ### Run
 
@@ -10,7 +13,8 @@ make -f hillshade.mk LIMIT=170 INPUT=./input.tmp.tif
 
 Running your favorite process and only it :
 ```
-make -f hillshade.mk LIMIT=170 INPUT=./input.tmp.tif 4  # there are 4 processes : 1, 2, 3, 4
+# there are four prebuilt processes : 1, 2, 3, 4
+make -f hillshade.mk LIMIT=170 INPUT=./input.tmp.tif 4 
 ```
 ### Trick
 Resizing to screensize proportionaly:
