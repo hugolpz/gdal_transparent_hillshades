@@ -1,6 +1,6 @@
-# make -f hillshade.mk LIMIT=170 INPUT=./input.tmp.tif : runs 4 tests for transparent hillshades
+# make -f hillshades.mk LIMIT=170 INPUT=./input.tmp.tif : runs 4 tests for transparent hillshades
 LIMIT=220
-INPUT=./input.tmp.tif
+INPUT=./srtm3.tmp.tif
 
 end: 1 2 3
 	# just to them all.
@@ -14,8 +14,8 @@ end: 1 2 3
 	gdal_translate -co ALPHA=YES ./final.vrt ./0_final_no_compression.tif
 
 2: opacity
-	gdal_calc.py -A ./hillshade.tmp.tif  --outfile=./$@_color_crop.tmp.tif 		--calc="255*(A>$(LIMIT)) +      A*(A<=$(LIMIT))"
-	gdal_calc.py -A ./hillshade.tmp.tif  --outfile=./$@_opacity_crop.tmp.tif 	--calc="  1*(A>$(LIMIT)  +(256-A)*(A<=$(LIMIT))"
+	gdal_calc.py -A ./hillshade.tmp.tif  --outfile=./$@_color_crop.tmp.tif		--calc="255*(A>$(LIMIT)) +      A*(A<=$(LIMIT))"
+	gdal_calc.py -A ./hillshade.tmp.tif  --outfile=./$@_opacity_crop.tmp.tif	--calc="  1*(A>$(LIMIT)  +(256-A)*(A<=$(LIMIT))"
 	gdalbuildvrt -separate ./final.vrt ./$@_color_crop.tmp.tif ./$@_opacity_crop.tmp.tif
 	gdal_translate -co COMPRESS=LZW -co ALPHA=YES ./final.vrt ./$@_final_crop.tif
 
