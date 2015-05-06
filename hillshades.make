@@ -15,7 +15,7 @@ end: 1 2 3
 
 2: opacity
 	gdal_calc.py -A ./hillshade.tmp.tif  --outfile=./$@_color_crop.tmp.tif		--calc="255*(A>$(LIMIT)) +      A*(A<=$(LIMIT))"
-	gdal_calc.py -A ./hillshade.tmp.tif  --outfile=./$@_opacity_crop.tmp.tif	--calc="  1*(A>$(LIMIT)  +(256-A)*(A<=$(LIMIT))"
+	gdal_calc.py -A ./hillshade.tmp.tif  --outfile=./$@_opacity_crop.tmp.tif	--calc="  1*(A>$(LIMIT)) +(256-A)*(A<=$(LIMIT))"
 	gdalbuildvrt -separate ./final.vrt ./$@_color_crop.tmp.tif ./$@_opacity_crop.tmp.tif
 	gdal_translate -co COMPRESS=LZW -co ALPHA=YES ./final.vrt ./$@_final_crop.tif
 
