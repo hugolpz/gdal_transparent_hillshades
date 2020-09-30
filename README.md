@@ -10,7 +10,7 @@ make -f hillshades.make LIMIT=170 INPUT=./srtm3.tiff
 
 Run your favorite process and only it :
 ```
-make -f hillshades.make LIMIT=200 INPUT=./srtm3.tiff 2
+make -f hillshades.make LIMIT=200 INPUT=./srtm3.tiff 2       # notice the number, it's the target task
 ```
 ### Trick
 Resizing to screensize (width=1280px), proportionaly:
